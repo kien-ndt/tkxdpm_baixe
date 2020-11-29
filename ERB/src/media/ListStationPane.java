@@ -16,6 +16,13 @@ public class ListStationPane<T> extends ListDataPane<T>{
 	}
 	public void decorateCell(BikeStationCell<T> singlePane) {		
 		JButton button = new JButton("Xem chi tiet");
+		button.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String stationId = ((StationGeneral)singlePane.getData()).getID();
+				controller.getStationInfoPage(stationId);
+			}
+		});
 		singlePane.addDataHandlingComponent(button);		
 	}
 	

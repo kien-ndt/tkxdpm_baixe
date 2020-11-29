@@ -44,4 +44,8 @@ public abstract class ListDataPane<T> extends JScrollPane{
             pane.add(Box.createRigidArea(new Dimension(0, 40)));
         }
 	}
+	
+	public void setController(StationPageController controller) {
+		this.controller = controller;
+	}
 }

@@ -49,4 +49,8 @@ public abstract class BikeStationCell<T> extends JPanel{
 		
 		panel.add(component);
 	}
+	
+	public T getData(){
+		return t;
+	}
 }

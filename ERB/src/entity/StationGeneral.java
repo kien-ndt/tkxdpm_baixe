@@ -6,4 +6,8 @@ public class StationGeneral {
 	public String stationAddress;
 	public int num_Vehicies;
 	public int num_Docks;
+	
+	public String getID() {
+		return this.id;
+	}
 }
