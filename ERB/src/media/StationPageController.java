@@ -1,5 +1,6 @@
 package media;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,7 @@ import javax.swing.JPanel;
 import entity.*;
 import main.EBRUserController;
 import abstractdata.ADataPagePane;
+import abstractdata.DataPagePane;
 //import api.MediaApi;
 import abstractdata.ISearchPaneController;
 
@@ -85,6 +87,13 @@ public class StationPageController {
 		station.c_TBike=6;
 		StationInfoPane infoPane = new StationInfoPane();
 		infoPane.updateData(station);
-		ebrController.setInfoPane(infoPane);		
+		
+		JPanel bikepane = new JPanel(); // them pane chi tiet xe
+		bikepane.setBackground(Color.GREEN);
+		
+		DataPagePane fullinfoPane = new DataPagePane(infoPane, bikepane);
+		
+		
+		ebrController.setInfoPane(fullinfoPane);	
 	}
 }

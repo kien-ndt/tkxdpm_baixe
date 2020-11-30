@@ -31,7 +31,7 @@ public class EBRUser extends JFrame{
 	public void UBRUserCreateHome(EBRUserController controller) {
 		BorderLayout layout = new BorderLayout();
 		rootPanel.setLayout(layout);
-		controller.setPanel(rootPanel);		       
+		controller.setEBRUser(this);	       
 
 		rootPanel.add(new HomeNavArea(), BorderLayout.NORTH);
 		JPanel stationPage = controller.getStationPage();		
